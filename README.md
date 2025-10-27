@@ -67,7 +67,7 @@ You can load any huggingface model that uses the ModernBERT architecture. See th
 
 The tokenizer implementation `tokenizer/tokenizer.c` is a crude approximation of huggingface's BPE-based `PretrainedTokenizer`. It works for ~80% of cases, but misses alot of edge cases.
 
-## performance
+## performance (cpu only)
 
 The default `make compile` command currently applies the `-O3` optimization, which includes optimizations that are expensive in terms of compile time and memory usage. You can expect token throughput `> 1200` tokens/s. I include this rough figure only as a point of reference, because there are caveats:
 
